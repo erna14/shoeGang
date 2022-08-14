@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- SHOEGANG - HOME PAGE (HTML) -->
+<
+    <head>
+        <meta charset = "UTF-8">
+        <title> ShoeGang </title>
+        <link rel="icon" type="image/png" href="images/sneakerLogo.png">
+        <meta name ="viewport" content= "width=device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel = "stylesheet" href = "storehome.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+        <div class = "container">
+
+        <!-- NAVIGATION BAR -->
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <b><li><a href="storehome.html">HOME</a></li></b>
+                        <b> <li><a href="productNike.html">NIKE</a></li></b>
+                        <b> <li><a href="productJordan.html">AIR JORDAN</a></li></b>
+                        <b><li><a href="productAdidas.html">ADIDAS</a></li></b>
+                    </ul>
+                </nav>
+                <i style="margin-left: 40px; margin-right: 25px; font-size: 27px; cursor: pointer; color: darkblue; text-shadow: 2px 2px white;" class='bx bxs-shopping-bag' id="cart-icon"></i>
+            </div>
+
+
+            <div class="rows">
+
+                <div class="columns">
+                    <div class="text-box">
+                        <h1 style="color: white; font-weight: bold; font-style: italic; font-size: 100px;">SHOEGANG</h1>
+                        <h1 style="padding-top: 50px;"> The widest offer of newest and hotest drops in the sneaker community</h1>
+                    </div>
+                </div>
+                
+                <div class="columns">
+                    <div class="gallery-box">
+                        <img src="images/tene1.jpg" id = gallery>
+                        <ul>
+                            <li class="button current "> 1 </li>
+                            <li  class="button "> 2  </li>
+                            <li  class="button  "> 3</li>
+                            <li  class="button "> 4</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SHOPPING CART-->
+        <div class="cart">
+            <h2 class="cart-title">YOUR CART</h2>
+
+            <!-- CART CONTENT -->
+            <div class="cart-content">
+            </div>
+
+            <!-- $ TOTAL $ -->
+            <div class="total">
+                <div class="total-title">TOTAL</div>
+                <div class="total-price">$0</div>
+            </div>
+
+            <!-- PURCHASE BUTTON -->
+            <button type="button" class="purchase-btn">BUY NOW</button>
+
+            <!-- CLOSE CART -->
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
+
+    <!--JAVA SCRIPT-->
+        <script src="cart.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <script>
+            var button = document.getElementsByClassName("button");
+            var gallery = document.getElementById("gallery");
+
+            var images = new Array (
+
+                "images/tene1.jpg",
+                "images/tene2.jpg",
+                "images/tene3.jpg",
+                "images/tene4.jpg"
+            );
+
+            for( let i = 0; i<button.length; i++){
+
+                button[i].onclick = function()
+                {
+                    gallery.src = images[i];
+                    let current = document.getElementsByClassName("current");
+                    current[0].className = current[0].className.replace("current","")
+                    this.className += "current"
+                }
+            }
+        </script>
+
+    </body>
+</html>

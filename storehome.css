@@ -1,0 +1,258 @@
+
+/* SHOEGANG - HOME PAGE (CSS) */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 102vh;
+    background: linear-gradient( 45deg, #549ce0, #b7dafc);
+    color: rgb(39, 71, 177);
+    position: relative;
+}
+
+.navigation{
+    width: 90%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -15px;
+    margin-right: 12px;
+}
+
+.menu-icon{
+    cursor: pointer;
+    width: 30px;
+    margin-left: 60px;
+}
+
+.nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    align-items: right;
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+    font-style: italic;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: darkblue;
+    text-shadow: 2px 2px white;
+    font-size: 19px;
+    padding: 5px 2px;
+}
+
+nav ul li a:hover{
+    color: white;
+    text-shadow: 2px 2px darkblue;
+}
+
+i:hover{
+    color: white;
+    text-shadow: 2px 2px darkblue;
+}
+
+.rows{
+    width: 80%;
+    min-height: 85vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columns{
+    margin: 20px 0;
+    flex-basis: 50%;
+    min-width: 300px;
+    height: 100%;
+    position: relative;
+}
+
+.text-box{
+    max-width: 400px;
+    margin-top: 100px;
+}
+
+.text-box h4{
+    color: rgb(253, 253, 253);
+}
+
+.text-box h1{
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    line-height: 40px;
+}
+
+.gallery-box{
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.gallery-box img{
+    width: 100%;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.gallery-box ul {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gallery-box ul li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.gallery-box .current{
+    color: rgb(0, 0, 0);
+}
+
+.gallery-box ul li::after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: darkblue;
+    position: absolute;
+    top: 8px;
+    left: -5px;
+}
+
+.gallery-box .current::after{
+    background:transparent;
+}
+
+/* SHOPPING CART */
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 340px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.cart.active{
+    right: 0;
+}
+
+.cart-title{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 33px;
+    margin-top: 1rem;
+    color: black;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.cart-product-title{
+    font-size: 1.2rem;
+}
+
+.cart-quantity{
+    border: 1px solid black;
+    outline-color: blue;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove{
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+.total-title{
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.total-price{
+    margin-left: 0.5rem;
+}
+
+.purchase-btn{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: none;
+    background: #549ce0;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.purchase-btn:hover{
+    background: black;
+    color: white;
+    text-shadow: 2px 2px #549ce0;
+}
+
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 25px;
+    cursor: pointer;
+
+}
